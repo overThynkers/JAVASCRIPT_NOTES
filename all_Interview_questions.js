@@ -192,3 +192,83 @@
 
 //* Q25: Why do we use Symbol?
 //? Answer: To create unique values that never collide with other values.
+
+
+
+//! CONCATINATION AND TYPE COERCION - INTERVIEW QUESTIONS
+
+
+//* Q1: What is concatenation in JavaScript?
+//? Answer: Concatenation means joining two or more strings together using the + operator.
+//? Example: "Hello" + "World" = "HelloWorld"
+
+//* Q2: What happens when we use + operator with a string and a number?
+//? Answer: JavaScript converts the number into a string and performs string concatenation.
+//? Example: "5" + 10 = "510"
+
+//* Q3: What is type coercion in JavaScript?
+//? Answer: Type coercion is the automatic conversion of values from one data type to another during operations.
+
+//* Q4: What are the types of type coercion?
+//? Answer:
+//? 1. Implicit Coercion (automatic conversion by JS)
+//? 2. Explicit Coercion (manual conversion by developer)
+
+//* Q5: Why does "5" - 3 = 2 but "5" + 3 = "53"?
+//? Answer:
+//? - operator converts string to number → subtraction happens
+//? + operator converts number to string → concatenation happens
+
+//* Q6: What is the output of "Ali" - "Ahmed"?
+//? Answer: NaN (Not a Number)
+//? Because subtraction between non-numeric strings is invalid.
+
+//* Q7: What is NaN in type coercion context?
+//? Answer: NaN occurs when JavaScript tries to perform invalid numeric operations.
+
+//* Q8: What is output of true + true?
+//? Answer: 2
+//? Because true is converted to 1 → 1 + 1 = 2
+
+//* Q9: What is output of false + true?
+//? Answer: 1
+//? false = 0, true = 1 → 0 + 1 = 1
+
+//* Q10: What is output of true - false?
+//? Answer: 1
+//? true = 1, false = 0 → 1 - 0 = 1
+
+//* Q11: Why does " " + 0 return " 0"?
+//? Answer: Because space is a string, so number 0 is converted into string and concatenation happens.
+
+//* Q12: What is difference between implicit and explicit coercion?
+//? Answer:
+//? Implicit → automatic conversion by JavaScript
+//? Explicit → manual conversion using Number(), String(), Boolean()
+
+//* Q13: What is output of 10 + "20"?
+//? Answer: "1020"
+//? Because number is converted to string due to + operator.
+
+//* Q14: What is output of 9 - "5"?
+//? Answer: 4
+//? Because string "5" is converted to number.
+
+//* Q15: What is output of "Java" + "Script"?
+//? Answer: "JavaScript"
+
+//* Q16: What is output of " " + " "?
+//? Answer: "  " (two spaces)
+
+//* Q17: What is output of "Ali" + "Ahmed"?
+//? Answer: "AliAhmed"
+
+//* Q18: What is output of false - true?
+//? Answer: -1
+//? false = 0, true = 1 → 0 - 1 = -1
+
+//* Q19: Why JavaScript does type coercion?
+//? Answer: To make operations flexible and reduce errors in dynamic typing.
+
+//* Q20: Can type coercion lead to bugs?
+//? Answer: Yes, because it may produce unexpected results if not understood properly.
