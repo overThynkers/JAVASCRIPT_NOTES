@@ -582,3 +582,190 @@ const fruits = ["banana", "Apple", "orange", "Mango"];
 //     return accum + curEl;
 // });
 // console.log(total);
+
+
+
+// ! INTERVIEW QUESTION
+// * Question: How do you remove duplicate values from an array? And if we don't want to mutate the original array, what should we do?
+// ? Answer english me likhna hai
+
+// ==========================================================
+// * Removing Duplicates from an Array
+// ==========================================================
+
+// ? Removing duplicate values from an array is a very common task
+// ? in JavaScript development, especially when dealing with user
+// ? data, API responses, or any collection that might contain
+// ? repeated entries.
+
+// ? There are multiple ways to achieve this, depending on whether
+// ? you want to mutate the original array or create a new one.
+
+// ==========================================================
+// * Key Concepts to Mention in the Answer
+// ==========================================================
+
+// ? 1. Using Set (ES6) - The most modern and concise way
+// ? 2. Using filter and indexOf - Classic approach
+// ? 3. Using reduce - Functional approach
+// ? 4. Using forEach and includes - Manual approach
+// ? 5. Performance considerations for large arrays
+
+// ==========================================================
+// * Method 1: Using Set (Recommended)
+// ==========================================================
+
+// ? Set is a built-in object that only stores unique values.
+// ? This is the cleanest and most performant way to remove duplicates.
+
+// Example:
+
+const numbers = [1, 2, 2, 3, 4, 4, 5, 5, 5];
+
+// Creating a new array without mutating the original
+const uniqueNumbers = [...new Set(numbers)];
+console.log(uniqueNumbers); // [1, 2, 3, 4, 5]
+console.log(numbers); // [1, 2, 2, 3, 4, 4, 5, 5, 5] (Original unchanged)
+
+// ? Also works with strings
+const fruits = ["apple", "banana", "apple", "mango", "banana"];
+const uniqueFruits = [...new Set(fruits)];
+console.log(uniqueFruits); // ["apple", "banana", "mango"]
+
+// ==========================================================
+// * Method 2: Using filter() and indexOf()
+// ==========================================================
+
+// ? This method filters elements by keeping only the first
+// ? occurrence of each value. indexOf returns the first index
+// ? of a given element.
+
+// Example:
+
+const colors = ["red", "blue", "red", "green", "blue", "yellow"];
+
+const uniqueColors = colors.filter((color, index, array) => {
+return array.indexOf(color) === index;
+});
+
+console.log(uniqueColors); // ["red", "blue", "green", "yellow"]
+
+// ? How it works: For each element, we check if its first
+// ? occurrence index matches the current index. If yes, keep it;
+// ? if no (meaning it appeared earlier), skip it.
+
+// ==========================================================
+// * Method 3: Using reduce()
+// ==========================================================
+
+// ? The reduce method builds a new array by checking if the
+// ? current element already exists in the accumulator.
+
+// Example:
+
+const items = [10, 20, 10, 30, 20, 40];
+
+const uniqueItems = items.reduce((accumulator, currentValue) => {
+if (!accumulator.includes(currentValue)) {
+accumulator.push(currentValue);
+}
+return accumulator;
+}, []);
+
+console.log(uniqueItems); // [10, 20, 30, 40]
+
+// ==========================================================
+// * Method 4: Using forEach() and includes()
+// ==========================================================
+
+// ? A manual approach that gives you full control over the logic.
+
+// Example:
+
+const letters = ["a", "b", "a", "c", "b", "d"];
+
+const uniqueLetters = [];
+letters.forEach((letter) => {
+if (!uniqueLetters.includes(letter)) {
+uniqueLetters.push(letter);
+}
+});
+
+console.log(uniqueLetters); // ["a", "b", "c", "d"]
+
+// ==========================================================
+// * Handling Array of Objects (Removing Duplicates by Property)
+// ==========================================================
+
+// ? When working with objects, duplicates are usually identified
+// ? by a specific property (like id). Set alone won't work here
+// ? because objects are compared by reference, not value.
+
+// Example:
+
+const users = [
+{ id: 1, name: "Ali" },
+{ id: 2, name: "Ahmed" },
+{ id: 1, name: "Ali" }, // Duplicate based on id
+{ id: 3, name: "Sara" }
+];
+
+// Method 1: Using filter and Map/Set for tracking
+const seenIds = new Set();
+const uniqueUsers = users.filter(user => {
+if (seenIds.has(user.id)) {
+return false;
+}
+seenIds.add(user.id);
+return true;
+});
+
+console.log(uniqueUsers);
+// [{ id: 1, name: "Ali" }, { id: 2, name: "Ahmed" }, { id: 3, name: "Sara" }]
+
+// Method 2: Using reduce with an object as accumulator
+const uniqueUsers2 = Object.values(
+users.reduce((acc, user) => {
+acc[user.id] = user;
+return acc;
+}, {})
+);
+
+console.log(uniqueUsers2);
+
+// ==========================================================
+// * Performance Comparison (Good to Mention)
+// ==========================================================
+
+// ? For primitive values (strings, numbers):
+// ? - Set approach: O(n) - Fastest for large arrays
+// ? - filter + indexOf: O(n²) - Slower for large arrays because
+// ? indexOf iterates internally for each element
+
+// ? For arrays of objects:
+// ? - Map/Set tracking: O(n) - Recommended
+// ? - reduce with object: O(n) - Also efficient
+
+// ==========================================================
+// * One-Liner Duplicate Removal (Quick Answer)
+// ==========================================================
+
+// ? If the interviewer asks for the shortest way:
+
+const arr = [1, 2, 2, 3, 4, 4, 5];
+const unique = [...new Set(arr)];
+
+console.log(unique); // [1, 2, 3, 4, 5]
+
+// ==========================================================
+// * Interview Tip
+// ==========================================================
+
+// ? When answering this question, always mention:
+// ? 1. Whether the original array is mutated or not (immutability is
+// ? preferred in modern JavaScript, especially in React).
+// ? 2. The Set method as the modern ES6+ approach.
+// ? 3. How you'd handle objects (since Set compares by reference).
+// ? 4. Performance considerations for large datasets.
+// ? 5. That you understand multiple approaches and can choose based
+// ? on the specific use case.
