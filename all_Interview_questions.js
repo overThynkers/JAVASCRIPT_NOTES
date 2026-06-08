@@ -971,3 +971,134 @@ console.log(unique); // [1, 2, 3, 4, 5]
 // ? 4. Performance considerations for large datasets.
 // ? 5. That you understand multiple approaches and can choose based
 // ? on the specific use case.
+
+
+
+// ! INTERVIEW QUESTION TOPIC - STRINGS IN JAVASCRIPT
+
+// * What is a String in JavaScript?
+// ? A string is a sequence of characters used to represent text data.
+// ? Strings can be written using single quotes (''),
+// ? double quotes (""), or backticks (``).
+
+// * What is the length property of a string?
+// ? The length property returns the total number of characters
+// ? present in a string, including spaces.
+
+// * What are Escape Characters?
+// ? Escape characters are special characters preceded by a backslash (\)
+// ? that allow special formatting or symbols inside strings.
+
+// * What is the purpose of \n?
+// ? \n is used to insert a new line in a string.
+
+// * What is the purpose of \" and \' ?
+// ? They are used to include double quotes and single quotes
+// ? inside a string.
+
+// * What does indexOf() do?
+// ? indexOf() returns the index of the first occurrence
+// ? of a specified value in a string.
+
+// * What does lastIndexOf() do?
+// ? lastIndexOf() returns the index of the last occurrence
+// ? of a specified value in a string.
+
+// * What is the difference between indexOf() and lastIndexOf()?
+// ? indexOf() searches from left to right,
+// ? while lastIndexOf() searches from right to left.
+
+// * What does search() do?
+// ? search() searches for a value or regular expression
+// ? and returns the index of the first match.
+
+// * What is the advantage of search() over indexOf()?
+// ? search() supports Regular Expressions,
+// ? while indexOf() does not.
+
+// * What does match() do?
+// ? match() returns an array containing matched values
+// ? or null if no match is found.
+
+// * What does matchAll() do?
+// ? matchAll() returns an iterator containing detailed
+// ? information about all matches in a string.
+
+// * What does includes() do?
+// ? includes() checks whether a string contains
+// ? a specified value and returns true or false.
+
+// * What does startsWith() do?
+// ? startsWith() checks whether a string begins
+// ? with a specified value.
+
+// * What does endsWith() do?
+// ? endsWith() checks whether a string ends
+// ? with a specified value.
+
+// * What is slice()?
+// ? slice() extracts a part of a string and returns
+// ? it as a new string.
+
+// * What is substring()?
+// ? substring() extracts characters between two indexes
+// ? and returns them as a new string.
+
+// * What is the difference between slice() and substring()?
+// ? slice() supports negative indexes,
+// ? while substring() treats negative values as 0.
+
+// * What does replace() do?
+// ? replace() replaces the first occurrence
+// ? of a specified value in a string.
+
+// * What does replaceAll() do?
+// ? replaceAll() replaces all occurrences
+// ? of a specified value in a string.
+
+// * What is the difference between replace() and replaceAll()?
+// ? replace() changes only the first match,
+// ? while replaceAll() changes every match.
+
+// * What does charAt() do?
+// ? charAt() returns the character at a specified index.
+
+// * What does charCodeAt() do?
+// ? charCodeAt() returns the UTF-16 code
+// ? of the character at a specified index.
+
+// * What does at() do?
+// ? at() returns the character at a specified index
+// ? and also supports negative indexing.
+
+// * What is the advantage of at() over charAt()?
+// ? at() supports negative indexes,
+// ? while charAt() does not.
+
+// * What does toUpperCase() do?
+// ? toUpperCase() converts all characters
+// ? in a string to uppercase.
+
+// * What does toLowerCase() do?
+// ? toLowerCase() converts all characters
+// ? in a string to lowercase.
+
+// * What does trim() do?
+// ? trim() removes whitespace from the beginning
+// ? and end of a string.
+
+// * What does split() do?
+// ? split() converts a string into an array
+// ? based on a specified separator.
+
+// * What is Array.from() used for with strings?
+// ? Array.from() converts a string into an array
+// ? where each character becomes a separate element.
+
+// * Can strings be iterated in JavaScript?
+// ? Yes, strings are iterable and can be looped
+// ? through using loops like for...of.
+
+// * Are strings mutable in JavaScript?
+// ? No, strings are immutable. Once created,
+// ? their characters cannot be changed directly.
