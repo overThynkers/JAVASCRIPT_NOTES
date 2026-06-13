@@ -147,7 +147,81 @@ document.getElementById("eventBtn2").addEventListener("mouseenter", () => {
 //? onpointerout: A pointer moves out of an element (bubbles).
 //? onpointerover: A pointer moves into an element (bubbles).
 //? onpointerup: A pointer becomes inactive.
-//? onfullscreenchange: An element enters/exits fullscreen mode.
+//? onfullscreenchange: An element enters/exits fullscreen mode.// ! INTERVIEW QUESTION TOPIC - EVENTS IN JAVASCRIPT
+
+// * What is an event in JavaScript?
+// ? An event is an action or occurrence in the browser such as click, key press, scroll, load, etc.
+// ? JavaScript detects these events and allows us to run code in response.
+
+// * What is event handling in JavaScript?
+// ? Event handling is the process of writing code that runs when a specific event occurs,
+// ? like clicking a button or submitting a form.
+
+// * What is the difference between onclick and addEventListener?
+// ? onclick can assign only one handler and can be overwritten.
+// ? addEventListener can add multiple handlers and provides more control and flexibility.
+
+// * What are mouse events?
+// ? Mouse events are triggered by mouse actions like clicking, hovering, moving, or releasing.
+// ? Examples: click, dblclick, mouseover, mouseout, mousemove, mousedown, mouseup.
+
+// * What are keyboard events?
+// ? Keyboard events occur when a user interacts with the keyboard.
+// ? Examples: keydown, keyup, keypress (deprecated).
+
+// * What are form events?
+// ? Form events are triggered when users interact with form elements.
+// ? Examples: submit, reset, input, change, focus, blur, invalid.
+
+// * What is event bubbling?
+// ? Event bubbling is a process where an event starts from the target element
+// ? and moves upward to its parent elements in the DOM tree.
+
+// * What is event capturing?
+// ? Event capturing is the opposite of bubbling where the event starts from the parent
+// ? and moves down to the target element.
+
+// * Difference between event bubbling and capturing?
+// ? Bubbling: child → parent (default behavior)
+// ? Capturing: parent → child
+
+// * What does event.preventDefault() do?
+// ? It prevents the default browser behavior like form submission or link navigation.
+
+// * What does event.stopPropagation() do?
+// ? It stops the event from bubbling up to parent elements.
+
+// * What is event delegation?
+// ? Event delegation is a technique where a parent element handles events for its child elements
+// ? using event bubbling instead of adding listeners to each child individually.
+
+// * Why is event delegation useful?
+// ? It improves performance, reduces memory usage, and works for dynamically added elements.
+
+// * Difference between onchange and oninput?
+// ? oninput triggers instantly when the value changes.
+// ? onchange triggers after the input loses focus.
+
+// * What is the event loop?
+// ? The event loop is a mechanism in JavaScript that handles asynchronous tasks
+// ? like callbacks, promises, and events in a non-blocking way.
+
+// * What is debouncing?
+// ? Debouncing ensures that a function runs only after the user stops triggering an event
+// ? for a specific time (useful in search inputs).
+
+// * What is throttling?
+// ? Throttling ensures a function runs at fixed intervals
+// ? even if the event keeps firing continuously (like scroll events).
+
+// * What does 'this' refer to in event handlers?
+// ? In event handlers, 'this' refers to the element that triggered the event.
+
+// * Best practices for handling events?
+// ? Always use addEventListener instead of inline events.
+// ? Remove unused event listeners to avoid memory leaks.
+// ? Use event delegation for dynamic elements.
+// ? Optimize scroll and resize event performance.
 //? onfullscreenerror: Fullscreen mode request fails.
 //? oncontextmenu: The user right-clicks on an element (also listed in Mouse).
 
